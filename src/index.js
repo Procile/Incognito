@@ -17,7 +17,7 @@ if(existsSync("../ssl/key.pem") && existsSync("../ssl/cert.pem")) {
     cert: readFileSync("../ssl/cert.pem")
   });
   PORT = 443;
-} else { server = createHttpServer(); PORT = (process.env.PORT || 8080);}
+} else { server = createHttpServer(); PORT = (process.env.PORT || 80);}
 
 server.on("request", (req, res) => {
   if(bare.shouldRoute(req)) return bare.routeRequest(req, res);
