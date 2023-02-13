@@ -1,4 +1,3 @@
-
 let unlockedCookie = getCookie("unlocked");
     if (unlockedCookie !== "true") {
       let elements = document.getElementsByTagName("*");
@@ -24,4 +23,5 @@ let unlockedCookie = getCookie("unlocked");
           return c.substring(name.length, c.length);
         }
       }
-      return
+      return "";
+    }
